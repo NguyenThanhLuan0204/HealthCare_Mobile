@@ -23,7 +23,7 @@ class MyThemes {
       primaryColor: Colors.white,
       primaryColorDark: Colors.black,
       primaryColorLight: const Color(0xffFFFBFB),
-      buttonColor: const Color(0xff353638),
+      //buttonColor: const Color(0xff353638),
       cardColor: const Color.fromARGB(255, 78, 78, 78),
       colorScheme: const ColorScheme.dark(),
       iconTheme: const IconThemeData(
@@ -39,7 +39,7 @@ class MyThemes {
       primaryColorDark: const Color(0xffEDF0F3),
       primaryColorLight: const Color(0xffFFFFFF),
       cardColor: Colors.white,
-      buttonColor: Colors.white,
+      //buttonColor: Colors.white,
       colorScheme: const ColorScheme.light(),
       iconTheme: const IconThemeData(
         color: iconMenu,
