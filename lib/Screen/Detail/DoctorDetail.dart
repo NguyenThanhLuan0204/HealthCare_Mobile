@@ -68,7 +68,7 @@ class _DoctorDetailState extends State<DoctorDetail> {
                               'Content-Type': 'application/json',
                               'Authorization': 'Bearer $token'
                             };
-                            var request = http.Request('POST', Uri.parse('http://157.245.204.4:8080/api/v1/doctor/delete_doctor'));
+                            var request = http.Request('POST', Uri.parse('http://192.168.1.49:5000/api/v1/doctor/delete_doctor'));
                             request.body = json.encode({
                               "doctorId":{
                                 "id":widget.doctor.sId
@@ -284,7 +284,7 @@ class _DoctorDetailState extends State<DoctorDetail> {
                                     var request = http.Request(
                                         'PUT',
                                         Uri.parse(
-                                            'http://157.245.204.4:8080/api/v1/doctor/update_doctor'));
+                                            'http://192.168.1.49:5000/api/v1/doctor/update_doctor'));
                                     request.body = json.encode(
                                         {
                                           "doctorUpdate": {

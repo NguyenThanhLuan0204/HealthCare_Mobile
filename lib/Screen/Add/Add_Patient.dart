@@ -155,7 +155,7 @@ class _AddPatientState extends State<AddPatient> {
                     var request = http.Request(
                         'POST',
                         Uri.parse(
-                            'http://157.245.204.4:8080/api/v1/patient/add_patient'));
+                            'http://192.168.1.49:5000/api/v1/patient/add_patient'));
                     request.body = json.encode(
                         {
                           "name": name.text.toString(),

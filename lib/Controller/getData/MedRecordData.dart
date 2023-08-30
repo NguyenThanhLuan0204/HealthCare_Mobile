@@ -15,7 +15,7 @@ Future<List<MedRecord>> getMedRecordList() async {
   //   'Content-Type': 'application/json',
   //   'Authorization': 'Bearer $token'
   // };
-  // var request = http.Request('POST', Uri.parse('http://157.245.204.4:8080/api/v1/mediaRecord/get_media_record'));
+  // var request = http.Request('POST', Uri.parse('http://192.168.1.49:5000/api/v1/mediaRecord/get_media_record'));
   // request.body = json.encode({
   //   "date_start": "$thirtyDaysAgoDate",
   //   "date_end": "$tomorrowDate"
@@ -27,7 +27,7 @@ Future<List<MedRecord>> getMedRecordList() async {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer $token'
   };
-  var request = http.Request('POST', Uri.parse('http://157.245.204.4:8080/api/v1/mediaRecord/get_media_record'));
+  var request = http.Request('POST', Uri.parse('http://192.168.1.49:5000/api/v1/mediaRecord/get_media_record'));
   request.body = json.encode({
     "date_start": thirtyDaysAgoDate,
     "date_end": tomorrowDate

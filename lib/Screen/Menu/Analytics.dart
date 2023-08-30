@@ -498,7 +498,7 @@ class _LineChart extends StatelessWidget {
       'Authorization': 'Bearer $token'
     };
     var request = http.Request('POST',
-        Uri.parse('http://157.245.204.4:8080/api/v1/statictis/getStatistic'));
+        Uri.parse('http://192.168.1.49:5000/api/v1/statictis/getStatistic'));
     request.body = json.encode({
       "ip_mac": ["${_selectedValue.ipMac!}"],
       "year": _year
@@ -508,16 +508,19 @@ class _LineChart extends StatelessWidget {
     http.StreamedResponse response = await request.send();
     if (response.statusCode == 200) {
       print("get heartbeat");
-      var data = (await response.stream.bytesToString());
-      print("data heartbeat" + data);
+      var data = await response.stream.bytesToString();
+      print("data heartbeat: " + data);
       GetAnalytic getAnalytic = GetAnalytic.fromJson(json.decode(data));
+      print("getAnalytic.beatAvgs!.length: ");
       for (int i = 0; i < getAnalytic.beatAvgs!.length; i++) {
+        print("chay for ne");
         String monthString = getAnalytic.beatAvgs![i].month!;
         List<String> parts = monthString.split('/');
         int month = int.parse(parts[0]);
         print(month);
         spots[month - 1] =
             FlSpot(month.toDouble(), getAnalytic.beatAvgs![i].avg!);
+        print("spots nè"+spots[month].toString());
       }
     } else {
       print(response.reasonPhrase);
@@ -555,7 +558,7 @@ class _LineChart extends StatelessWidget {
       'Authorization': 'Bearer $token'
     };
     var request = http.Request('POST',
-        Uri.parse('http://157.245.204.4:8080/api/v1/statictis/getStatistic'));
+        Uri.parse('http://192.168.1.49:5000/api/v1/statictis/getStatistic'));
     request.body = json.encode({
       "ip_mac": ["${_selectedValue.ipMac!}"],
       "year": _year
@@ -616,7 +619,7 @@ class _LineChart extends StatelessWidget {
       'Authorization': 'Bearer $token'
     };
     var request = http.Request('POST',
-        Uri.parse('http://157.245.204.4:8080/api/v1/statictis/getStatistic'));
+        Uri.parse('http://192.168.1.49:5000/api/v1/statictis/getStatistic'));
     request.body = json.encode({
       "ip_mac": ["${_selectedValue.ipMac!}"],
       "year": _year
@@ -670,7 +673,7 @@ class _LineChart extends StatelessWidget {
       'Authorization': 'Bearer $token'
     };
     var request = http.Request('POST',
-        Uri.parse('http://157.245.204.4:8080/api/v1/statictis/getStatistic'));
+        Uri.parse('http://192.168.1.49:5000/api/v1/statictis/getStatistic'));
     request.body = json.encode({
       "ip_mac": ["${_selectedValue.ipMac!}"],
       "year": _year
@@ -728,7 +731,7 @@ class _LineChart extends StatelessWidget {
       'Authorization': 'Bearer $token'
     };
     var request = http.Request('POST',
-        Uri.parse('http://157.245.204.4:8080/api/v1/statictis/getStatistic'));
+        Uri.parse('http://192.168.1.49:5000/api/v1/statictis/getStatistic'));
     request.body = json.encode({
       "ip_mac": ["${_selectedValue.ipMac!}"],
       "year": _year
@@ -785,7 +788,7 @@ class _LineChart extends StatelessWidget {
       'Authorization': 'Bearer $token'
     };
     var request = http.Request('POST',
-        Uri.parse('http://157.245.204.4:8080/api/v1/statictis/getStatistic'));
+        Uri.parse('http://192.168.1.49:5000/api/v1/statictis/getStatistic'));
     request.body = json.encode({
       "ip_mac": ["${_selectedValue.ipMac!}"],
       "year": _year

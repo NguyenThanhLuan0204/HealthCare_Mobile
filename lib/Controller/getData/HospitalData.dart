@@ -8,7 +8,7 @@ Future<List<Hospital>> getHospitalList() async {
   var headers = {
     'Authorization': 'Bearer $token'
   };
-  var request = http.Request('GET', Uri.parse('http://157.245.204.4:8080/api/v1/hospital/get_all'));
+  var request = http.Request('GET', Uri.parse('http://192.168.1.49:5000/api/v1/hospital/get_all'));
 
   request.headers.addAll(headers);
 
@@ -33,7 +33,7 @@ Future<List<HospitalName>> getHospitalListName() async {
   var headers = {
     'Authorization': 'Bearer $token'
   };
-  var request = http.Request('GET', Uri.parse('http://157.245.204.4:8080/api/v1/hospital/get_all_cbb'));
+  var request = http.Request('GET', Uri.parse('http://192.168.1.49:5000/api/v1/hospital/get_all_cbb'));
 
   request.headers.addAll(headers);
 

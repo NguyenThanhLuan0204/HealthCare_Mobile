@@ -56,7 +56,7 @@ class _HospitalDetailState extends State<HospitalDetail> {
                             'Content-Type': 'application/json',
                             'Authorization': 'Bearer $token'
                           };
-                          var request = http.Request('POST', Uri.parse('http://157.245.204.4:8080/api/v1/hospital/delete_hospital'));
+                          var request = http.Request('POST', Uri.parse('http://192.168.1.49:5000/api/v1/hospital/delete_hospital'));
                           request.body = json.encode({
                             "id": "${widget.hospital.key}"
                           });

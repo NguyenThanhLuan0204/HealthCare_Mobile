@@ -68,7 +68,7 @@ class _AddHospitalState extends State<AddHospital> {
                   'Authorization': 'Bearer $token'
                 };
               print(name.toString());
-                var request = http.Request('POST', Uri.parse('http://157.245.204.4:8080/api/v1/hospital/add_hospital'));
+                var request = http.Request('POST', Uri.parse('http://192.168.1.49:5000/api/v1/hospital/add_hospital'));
                 request.body = json.encode({
                   "name": name.text.toString(),
                   "address": address.text.toString(),
